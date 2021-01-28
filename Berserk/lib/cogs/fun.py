@@ -12,7 +12,6 @@ from lib.bot.imgdownload import downloadImg
 from lib.bot.qrdec import qrDec
 
 OWNERS = ["618038532665114624", "623772185315639302"]
-sa
 
 
 class Fun(Cog):
