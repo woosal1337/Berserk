@@ -14,6 +14,7 @@ from lib.bot.qrdec import qrDec
 OWNERS = ["618038532665114624", "623772185315639302"]
 sa
 
+
 class Fun(Cog):
     def __init__(self, bot):
         self.bot = bot
