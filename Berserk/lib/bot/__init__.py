@@ -88,7 +88,6 @@ class Bot(BotBase):
         else:
             channel = self.stdout
             await channel.send("Dude your code freaking sucks, and error occured right here!")
-
         raise
 
     async def on_command_error(self, ctx, exc):
@@ -106,7 +105,7 @@ class Bot(BotBase):
             self.channel = self.get_channel(801899005411197018)
             self.ready = True
             self.cogs_ready = Ready()
-            self.guild = self.get_guild(801899005411197018)
+            self.guild = self.get_guild(801895525263343656)
             self.stdout = self.get_channel(801899005411197018)
             self.scheduler.add_job(self.print_message, CronTrigger(day_of_week=0, hour=12, minute=0, second=0))
             self.scheduler.start()
@@ -114,8 +113,6 @@ class Bot(BotBase):
             while self.cogs_ready.all_ready():
                 await sleep(0.5)
 
-            await self.stdout.send("Now online!")
-            await self.stdout.send("If this prints, then COGs do work!")
 
         else:
             print("BOT reconnected!")

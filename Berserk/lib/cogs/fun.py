@@ -12,7 +12,7 @@ from lib.scripts.qrgen import saveQrPng
 from lib.scripts.imgdownload import downloadImg
 from lib.scripts.qrdec import qrDec
 
-OWNERS = ["618038532665114624", "623772185315639302"]
+OWNERS = [618038532665114624, 623772185315639302]
 
 
 class Fun(Cog):
@@ -52,7 +52,7 @@ class Fun(Cog):
             await ctx.send("You don't have server permissions!")
 
     @command(name="delete", aliases=["del", "Del", "DELETE", "DEL", "Delete"])
-    async def delete(self, ctx, *args):
+    async def delMessage(self, ctx, *args):
         if ctx.message.author.top_role.permissions.administrator:
             # !del all (delete all messages)
             # !del first x (delete first x messages)
@@ -115,6 +115,52 @@ class Fun(Cog):
                 await ctx.send("Such user does not exist or you have a missing argument!")
         else:
             await ctx.send("You don't have server permissions!")
+
+
+    @command(name="delchannel")
+    async def delChannel(self,ctx,*channel_name:discord.channel.TextChannel):
+        if ctx.message.author.top_role.permissions.administrator:
+            try:
+                await ctx.send("Deleting the channel `{0}`".format(channel_name[0]))
+                await asyncio.sleep(1.5)
+                await channel_name[0].delete()
+                return True
+            except:
+                await ctx.send("Such channel does not exist!")
+        else:
+            await ctx.send("You don't have server permissions!")
+
+    @command(name="users", aliases=["usersdiscord", "totalusers"])
+    async def users_dc(self, ctx):
+        await ctx.message.delete()
+        if ctx.message.author.id in OWNERS:
+            for i in OWNERS:
+                user = await self.bot.fetch_user(int(i))
+                userCount = 0
+                for j in self.bot.guilds:
+                    userCount += j.member_count
+                try:
+                    await user.send(
+                        "There are {0} users in {1} servers using the bot!".format(userCount, len(self.bot.guilds)))
+                except:
+                    pass
+        else:
+            await ctx.send("You are not the owner of the bot! Only owners can access this command!")
+
+    @command(name="servers", aliases=["server", "totalservers"])
+    async def total_servers(self, ctx):
+        await ctx.message.delete()
+        if ctx.message.author.id in OWNERS:
+            for i in OWNERS:
+                user = await self.bot.fetch_user(int(i))
+                try:
+                    await user.send("BOT is currently in {0} servers!".format(len(self.bot.guilds)))
+                except:
+                    pass
+        else:
+            await ctx.send("Dear {0}, you are not the owner of the bot! Only owners can access this command!".format(
+                ctx.message.author.name))
+
 
     @Cog.listener()
     async def on_ready(self):
