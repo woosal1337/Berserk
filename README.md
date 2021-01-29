@@ -7,27 +7,51 @@
 
  ### Description
  <blockquote>
-For Berserk, as its name, we are trying to be crazy, to supply it with the functions you have never or hardly ever faced yet! LET'S GET CREAZY TOGETHER!
+For Berserk, as its name, we are trying to be crazy, to supply it with the mad functions and features you have never or hardly ever faced yet! LET'S GET CRAZY TOGETHER!
 </blockquote>
 
 ### How it works
 Just add the bot to your server by clicking [here](https://discord.com/oauth2/authorize?client_id=803816454662258748&permissions=8&scope=bot)
 
-### Features
-[SOON]
+### User Features
+1) QR Encoder/Generator with the given link
+2) QR Decoder with the given image link BETA (NOT STABLE)
 
-### User Commands
-[SOON]
 
-### Admin/Owner Commands
-[SOON]
+### Admin Features
+1) Random Message Spammer
+2) BAN Members
+3) Delete messages of a channel
+4) Nuke channel
+5) Total Number of Users the BOT is serving to
+6) Total Number of Servers the BOT is in
+
 
 ### What to come
 <ol type="I">
 	<li>
-		[SOON]
+		Reddit Community Most Rated Post Reshare
+	</li>
+	<li>
+		Quick Note Taking App
+	</li>
+	<li>
+		Free Games (Epic Games/Steam) Notification
+	</li>
+	<li>
+		Most Important Tech/Elon 
+	</li>
+	<li>
+		Weather 
+	</li>
+	<li>
+		User/Server Stats
+	</li>
+	<li>
+		? Free Music BOT ?
 	</li>
 </ol>
+
 
 ### Contributors
 <p>
