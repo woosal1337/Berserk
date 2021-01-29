@@ -11,7 +11,7 @@ from apscheduler.triggers.cron import CronTrigger
 from asyncio import sleep
 import os
 
-PREFIX = "+"
+PREFIX = "!"
 OWNER_IDS = [618038532665114624]
 COGS = [path.split(os.sep)[-1][:-3] for path in glob("./lib/cogs/*.py")]
 

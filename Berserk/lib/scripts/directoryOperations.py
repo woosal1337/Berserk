@@ -1,4 +1,3 @@
-
 from os import listdir
 from os import path as osPath
 from sys import path as sysPath
