@@ -39,8 +39,8 @@ Just add the bot to your server by clicking [here](https://discord.com/oauth2/au
 		Free Games (Epic Games/Steam) Notification
 	</li>
 	<li>
-		Most Important Tech/Elon 
-	</li>
+		Most Important Tech/Elon News
+	</li>	
 	<li>
 		Weather 
 	</li>
@@ -51,7 +51,6 @@ Just add the bot to your server by clicking [here](https://discord.com/oauth2/au
 		? Free Music BOT ?
 	</li>
 </ol>
-
 
 ### Contributors
 <p>
